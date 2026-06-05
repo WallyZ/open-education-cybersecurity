@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "cybersecurity",
+  "title": "Open Education Cybersecurity",
+  "role": "content-repository",
+  "compatibleSuite": "open-education-suite",
+  "license": "CC-BY-4.0 for repo-authored metadata; linked third-party resources retain original licenses",
+  "attribution": "Open Education Cybersecurity",
+  "paths": {
+    "studyPlans": "study-plans",
+    "resources": "resources",
+    "objectives": "objectives",
+    "assessments": "assessments"
+  },
+  "status": "seeded-empty"
+}
