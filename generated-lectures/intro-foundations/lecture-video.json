@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "courseId": "CYB-101",
+  "objectiveIds": [
+    "cybersecurity:objectives/course/cyb-101/security-thinking",
+    "cybersecurity:objectives/course/cyb-101/threat-modeling",
+    "cybersecurity:objectives/course/cyb-101/ethics-and-authorization"
+  ],
+  "title": "Security Thinking Before Tools",
+  "targetDurationMinutes": 50,
+  "fixtureDurationSeconds": 180,
+  "mediaStatus": "deterministic-fixture",
+  "teacherPersonaRef": "generated-lectures/intro-foundations/persona-reference.json",
+  "segments": [
+    {
+      "id": "opening",
+      "kind": "lecture",
+      "durationSeconds": 45,
+      "boardPlan": "Write: asset, threat, control, evidence, authorization.",
+      "transcript": "Cybersecurity starts with responsibility. Before we name a tool, we name what must be protected, what could go wrong, what evidence we have, and what we are authorized to do."
+    },
+    {
+      "id": "worked-threat-model",
+      "kind": "board-work",
+      "durationSeconds": 75,
+      "boardPlan": "Draw a login page, database, user, attacker, and trust boundary.",
+      "transcript": "A threat model is a disciplined sketch of reality. We mark assets, actors, entry points, boundaries, threats, mitigations, and assumptions. The drawing keeps us honest."
+    },
+    {
+      "id": "pause-practice",
+      "kind": "checkpoint",
+      "durationSeconds": 30,
+      "overlay": "Pause and write one asset, one threat, and one authorization boundary for a system you own.",
+      "transcript": "Pause here. Write one asset, one threat, and one authorization boundary for a system you own. Leave space to revise it."
+    },
+    {
+      "id": "close",
+      "kind": "lecture",
+      "durationSeconds": 30,
+      "boardPlan": "Circle authorization and evidence.",
+      "transcript": "Good defensive work is careful. We do not test what we do not own or have permission to test, and we do not claim more than evidence supports."
+    }
+  ],
+  "practicePrompts": [
+    "Draw a threat model for a login page using only safe, hypothetical details.",
+    "Write a risk memo that distinguishes evidence from suspicion."
+  ]
+}

@@ -1,0 +1,4 @@
+.codex-cache/
+*.pyc
+__pycache__/
+

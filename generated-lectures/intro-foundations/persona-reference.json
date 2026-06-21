@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "subjectRepo": "cybersecurity",
+  "courseId": "CYB-101",
+  "personaId": "oet-calm-board-professor-v1",
+  "personaVersion": "1.0.0",
+  "voiceMatchPolicy": "match-generated-instructor-gender",
+  "targetInstructorGender": "male",
+  "targetVoiceGender": "masculine",
+  "deliveryStyle": "calm, precise, evidence-first defensive instructor at a board",
+  "disclosureLanguage": "This lesson is delivered by a generated instructor for cybersecurity education.",
+  "status": "contract-reference"
+}

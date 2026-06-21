@@ -4,13 +4,21 @@
   "title": "Open Education Cybersecurity",
   "role": "content-repository",
   "compatibleSuite": "open-education-suite",
-  "license": "CC-BY-4.0 for repo-authored metadata; linked third-party resources retain original licenses",
+  "license": "CC-BY-4.0 for repo-authored metadata and curriculum text unless a file says otherwise; linked third-party resources retain original licenses",
   "attribution": "Open Education Cybersecurity",
   "paths": {
     "studyPlans": "study-plans",
     "resources": "resources",
     "objectives": "objectives",
-    "assessments": "assessments"
+    "assessments": "assessments",
+    "misconceptions": "misconceptions",
+    "fixtures": "fixtures",
+    "generatedLectures": "generated-lectures"
   },
-  "status": "seeded-empty"
+  "status": "complete-delivery-ready",
+  "teacherAssets": {
+    "repo": "../open-education-teacher",
+    "recommendedProfileId": "oet-calm-board-professor-v1",
+    "fallbackProfileId": "oes-default-generated-instructor-v1"
+  }
 }

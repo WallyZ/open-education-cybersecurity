@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "courseId": "CYB-101",
+  "scenarios": [
+    {
+      "learnerId": "new-defender",
+      "profile": "Knows computers but has no security vocabulary.",
+      "adaptation": "Use home-network analogies, require asset diagrams, and avoid tool-first explanations."
+    },
+    {
+      "learnerId": "tool-focused",
+      "profile": "Wants to jump into tools before reasoning.",
+      "adaptation": "Require threat model and authorization statement before any lab action."
+    },
+    {
+      "learnerId": "incident-anxious",
+      "profile": "Overreacts to ambiguous evidence.",
+      "adaptation": "Use triage checklists, uncertainty language, and calm first-hour tabletop practice."
+    }
+  ]
+}

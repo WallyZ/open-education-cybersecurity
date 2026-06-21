@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "courseId": "CYB-101",
+  "items": [
+    {
+      "assessmentId": "cyb-assessment-001-baseline-essay",
+      "type": "essay",
+      "objectiveIds": ["cybersecurity:objectives/course/cyb-101/security-thinking"],
+      "promptRef": "Baseline essay on a security failure",
+      "evidenceRequired": ["assets", "impact", "control gaps", "alternative action"],
+      "rubricRef": "assessments/cybersecurity-assessment-bank.md"
+    },
+    {
+      "assessmentId": "cyb-assessment-002-network-flow",
+      "type": "diagram_explanation",
+      "objectiveIds": ["cybersecurity:objectives/course/cyb-101/network-and-identity-basics"],
+      "promptRef": "Trace a login and network request",
+      "evidenceRequired": ["flow diagram", "trust boundary", "authentication step", "assumption"],
+      "rubricRef": "assessments/cybersecurity-assessment-bank.md"
+    },
+    {
+      "assessmentId": "cyb-assessment-003-threat-model",
+      "type": "project",
+      "objectiveIds": ["cybersecurity:objectives/course/cyb-101/threat-modeling"],
+      "promptRef": "Build a threat model for a login page",
+      "evidenceRequired": ["assets", "actors", "entry points", "mitigations"],
+      "rubricRef": "assessments/cybersecurity-assessment-bank.md"
+    },
+    {
+      "assessmentId": "cyb-assessment-004-risk-memo",
+      "type": "decision_memo",
+      "objectiveIds": ["cybersecurity:objectives/course/cyb-101/control-selection", "cybersecurity:objectives/course/cyb-101/risk-communication"],
+      "promptRef": "Write a control selection risk memo",
+      "evidenceRequired": ["options", "tradeoffs", "residual risk", "audience adaptation"],
+      "rubricRef": "assessments/cybersecurity-assessment-bank.md"
+    },
+    {
+      "assessmentId": "cyb-assessment-005-log-triage",
+      "type": "simulation_after_action_review",
+      "objectiveIds": ["cybersecurity:objectives/course/cyb-101/log-triage"],
+      "promptRef": "Analyze synthetic logs and write triage notes",
+      "evidenceRequired": ["observations", "uncertainty", "next evidence", "priority"],
+      "rubricRef": "assessments/cybersecurity-assessment-bank.md"
+    },
+    {
+      "assessmentId": "cyb-assessment-006-incident-tabletop",
+      "type": "simulation_plan",
+      "objectiveIds": ["cybersecurity:objectives/course/cyb-101/incident-response", "cybersecurity:objectives/course/cyb-101/ethics-and-authorization"],
+      "promptRef": "First-hour incident response tabletop",
+      "evidenceRequired": ["containment", "preservation", "communication", "authorization boundary"],
+      "rubricRef": "assessments/cybersecurity-assessment-bank.md"
+    },
+    {
+      "assessmentId": "cyb-assessment-007-capstone-defense",
+      "type": "oral_defense_and_portfolio",
+      "objectiveIds": ["cybersecurity:objectives/course/cyb-101/capstone-defense"],
+      "promptRef": "Defend a small security improvement plan",
+      "evidenceRequired": ["diagnosis", "plan", "objection response", "revision"],
+      "rubricRef": "assessments/cybersecurity-assessment-bank.md"
+    }
+  ]
+}
