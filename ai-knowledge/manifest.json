@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "open-education/offline-ai-knowledge-store/v1",
+  "storeId": "cybersecurity-offline-ai-knowledge",
+  "ownerRepoId": "cybersecurity",
+  "role": "content-knowledge-seed",
+  "title": "Open Education Cybersecurity Offline AI Knowledge Seed",
+  "description": "Public-safe, citation-required local retrieval seed for ethical defensive security, threat modeling, secure systems, incident response, privacy, governance, and responsible practice.",
+  "sourceRecordsPath": "ai-knowledge/records.jsonl",
+  "preferredRuntimeProfiles": [
+    "ollama-local",
+    "lm-studio-local"
+  ],
+  "runtimeProfiles": [
+    {
+      "id": "ollama-local",
+      "provider": "ollama",
+      "apiBase": "http://127.0.0.1:11434",
+      "chatEndpoint": "/api/chat",
+      "embeddingsEndpoint": "/api/embeddings",
+      "networkScope": "localhost-only",
+      "defaultModelPolicy": "owner-selected"
+    },
+    {
+      "id": "lm-studio-local",
+      "provider": "lm-studio",
+      "apiBase": "http://127.0.0.1:1234/v1",
+      "chatEndpoint": "/chat/completions",
+      "embeddingsEndpoint": "/embeddings",
+      "networkScope": "localhost-only",
+      "defaultModelPolicy": "owner-selected"
+    }
+  ],
+  "recordTypes": [
+    "program",
+    "workflow",
+    "objective",
+    "assessment",
+    "misconception",
+    "course",
+    "source_index",
+    "lecture_metadata"
+  ],
+  "generation": {
+    "status": "suite-generated-minimum-public-safe",
+    "builderRepoId": "open-education-suite",
+    "builderPath": "scripts/ai/build-content-ai-knowledge-federation.ps1",
+    "recordCount": 8,
+    "duplicateRecordIdCount": 0,
+    "danglingReferenceCount": 0,
+    "restrictedAnswerRecordCount": 0,
+    "copiedSourceTextRecordCount": 0,
+    "recordsSha256": "ce931a2727f1d884e0d83856a755ca9d017d9c3adcba605bfcc1a7d298acf3e8"
+  },
+  "privacyBoundary": {
+    "containsLearnerPrivateData": false,
+    "containsCredentials": false,
+    "containsPrivateNotes": false,
+    "containsEmbeddings": false,
+    "containsCopiedSourceText": false,
+    "containsRestrictedAnswers": false,
+    "allowsLocalPrivateOverlays": true
+  },
+  "writebackPolicy": {
+    "seedRecordsAreReadOnly": true,
+    "privateOverlaysStayLocal": true,
+    "publicPromotionRequiresReview": true,
+    "durableLearnerStateRequiresCheckedCode": true
+  },
+  "retrievalPolicy": {
+    "citationRequired": true,
+    "sourcePathRequired": true,
+    "preferCourseSeedBeforePrivateOverlay": true,
+    "fallbackWhenMissing": "ask for clarification or use deterministic suite content lookup"
+  },
+  "beliefAndConscienceBoundary": {
+    "christianFaithAndValuesMayBeEncouragedWhenDeclaredByCourse": true,
+    "compelledReligiousProfession": false,
+    "equivalentNonDevotionalAcademicRouteRequired": true,
+    "conscienceAndFamilyChoicePreserved": true
+  }
+}
