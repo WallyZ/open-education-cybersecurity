@@ -64,6 +64,12 @@ try {
         '.\AGENTS.md',
         '.\README.md',
         '.\.gitignore',
+        '.\.gitattributes',
+        '.\repo-standards\lint\language_lint_matrix.json',
+        '.\repo-standards\lint\markdownlint-cli2.jsonc',
+        '.\scripts\lint\run_changed_scope.ps1',
+        '.\scripts\lint\run_language_lint.ps1',
+        '.\scripts\markdown_format_guard.py',
         '.\content-repo.json',
         '.\docs\TODO.md',
         '.\resources\reading-library.md',
@@ -85,9 +91,33 @@ try {
         '.\assessments',
         '.\misconceptions',
         '.\fixtures',
-        '.\generated-lectures'
+        '.\generated-lectures',
+        '.\repo-standards\lint',
+        '.\scripts\lint'
     )) {
         Assert-DirectoryExists $dir
+    }
+
+    Write-VerifyLog 'running changed-scope language lint'
+    $lintOutput = & .\scripts\lint\run_changed_scope.ps1 `
+        -RepoRoot $repo `
+        -ContextProfile cloud `
+        -IncludeUntracked 2>&1
+    $lintSuccess = $?
+    $lintOutput | Tee-Object -FilePath $logPath -Append
+    if (-not $lintSuccess) {
+        throw 'Changed-scope language lint failed.'
+    }
+
+    Write-VerifyLog 'running full tracked-Markdown lint'
+    $trackedMarkdown = @(git -C $repo ls-files '*.md')
+    $fullLintOutput = & .\scripts\lint\run_language_lint.ps1 `
+        -RepoRoot $repo `
+        -ChangedFiles $trackedMarkdown 2>&1
+    $fullLintSuccess = $?
+    $fullLintOutput | Tee-Object -FilePath $logPath -Append
+    if (-not $fullLintSuccess) {
+        throw 'Full tracked-Markdown lint failed.'
     }
 
     $manifest = Get-Content -LiteralPath '.\content-repo.json' -Raw | ConvertFrom-Json
