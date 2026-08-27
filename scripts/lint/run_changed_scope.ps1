@@ -369,7 +369,7 @@ $checks = @(
 - [ ] Smoke TODO ready task-pack bridge [PH2] <!-- ms:evidence id=RK_SMOKE_TASK_PACK_001 path=scripts/rollout/write_task_pack.ps1 symbols=Write-TodoTaskPack strings="QA Live Automation,Source TODO" --> <!-- ms:meta priority=p1 owner=@repo-kit stale-days=14 automation-level=assisted human-checkpoint=review rollout-scope=single-repo validation-profile=cloud safe-autofix=review updated=2026-06-03 -->
   - Deliverables: generated task pack from a ready-queue item.
   - Files: `scripts/rollout/write_task_pack.ps1`, `docs/TASK_PACK_GENERATOR.md`.
-  - Verification: `pwsh -NoProfile -ExecutionPolicy Bypass -File .\scripts\codex-verify.ps1 -RepoRoot . -ContextProfile cloud -Mode changed -IncludeUntracked`.
+  - Verification: `pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\scripts\codex-verify.ps1 -RepoRoot . -ContextProfile cloud -Mode changed -IncludeUntracked`.
   - QA Live automation: Not required for this fixture; generated packs for UI/game/Unreal/runtime TODOs carry the repo-specific QA Live dry-run/capability-manifest instruction.
   - Drift guard: task pack includes source TODO metadata and relevant file list.
   - Downstream rollout: downstream agents can start from the generated pack without rescanning docs.

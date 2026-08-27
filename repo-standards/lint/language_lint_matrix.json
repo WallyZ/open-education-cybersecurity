@@ -2,7 +2,7 @@
   "schema_version": 1,
   "id": "repo-kit.language-lint-matrix.v1",
   "updated": "2026-06-03",
-  "default_command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\lint\\run_language_lint.ps1 -RepoRoot .",
+  "default_command": "pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\\scripts\\lint\\run_language_lint.ps1 -RepoRoot .",
   "report_artifacts": {
     "json": ".codex-cache/tmp/<run-id>/language_lint.json",
     "markdown": ".codex-cache/tmp/<run-id>/language_lint.md"
@@ -47,7 +47,7 @@
         "cspell"
       ],
       "local_fallback": "Report-only by default. Use repo-standards/lint/docs_terminology_allowlist.txt for shared terms and promote to failure only with -EnforceDocsTerminology.",
-      "run_command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\lint\\run_language_lint.ps1 -RepoRoot . -EnforceDocsTerminology",
+      "run_command": "pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\\scripts\\lint\\run_language_lint.ps1 -RepoRoot . -EnforceDocsTerminology",
       "report_artifact": ".codex-cache/tmp/<run-id>/language_lint.json",
       "downstream_applicability": "Docs-heavy repos that want typo drift detection without blocking generated, vendor, archive, or domain-specific vocabulary by default."
     },
@@ -95,7 +95,7 @@
         "PSScriptAnalyzer"
       ],
       "local_fallback": "Parse PowerShell files with System.Management.Automation.Language.Parser before optional analyzer checks.",
-      "run_command": "pwsh -NoProfile -ExecutionPolicy Bypass -File .\\scripts\\lint\\run_language_lint.ps1 -RepoRoot .",
+      "run_command": "pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File .\\scripts\\lint\\run_language_lint.ps1 -RepoRoot .",
       "report_artifact": ".codex-cache/tmp/<run-id>/language_lint.json",
       "downstream_applicability": "Repos with PowerShell scripts, modules, bootstrap scripts, or verifier entrypoints."
     },
@@ -245,7 +245,7 @@
       {
         "id": "repo-kit-language-lint",
         "name": "repo-kit-language-lint",
-        "entry": "pwsh -NoProfile -ExecutionPolicy Bypass -File scripts/lint/run_language_lint.ps1 -RepoRoot .",
+        "entry": "pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File scripts/lint/run_language_lint.ps1 -RepoRoot .",
         "language": "system",
         "pass_filenames": false
       }
@@ -253,11 +253,11 @@
     "taskfile": [
       {
         "task": "lint:language",
-        "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/lint/run_language_lint.ps1 -RepoRoot ."
+        "command": "pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/lint/run_language_lint.ps1 -RepoRoot ."
       },
       {
         "task": "lint:language:strict",
-        "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./scripts/lint/run_language_lint.ps1 -RepoRoot . -RequireExternalTools"
+        "command": "pwsh -NoProfile -NonInteractive -ExecutionPolicy Bypass -File ./scripts/lint/run_language_lint.ps1 -RepoRoot . -RequireExternalTools"
       }
     ]
   }
